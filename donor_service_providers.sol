@@ -1,6 +1,8 @@
 pragma solidity >=0.4.22 <0.6.0;
 
 // @title Pay - Facilitates payments.
+//
+
 
 
 contract RegisterMUM {
@@ -18,6 +20,12 @@ contract RegisterMUM {
 	event RegistrationCOMPLETE(address _mumCAREcontractADDRESS, string _mumNAME, uint256 amou);
 	event FundsSENT(address _mumCAREcontractADDRESS, string _mumNAME, uint256 mumHEALTHnumber);
  
+//To deploy/Register a new contract for a Mum, please ensure you deploy using the following:
+// _registerFEE - amount of fee (42)
+// _mumHEALTHnumber - Health ID number (123456)
+//  _mumName - name of recepient (Myra)
+// _carePROVIDERname - name of provider (DigiHealth)
+// _carePROVIDERaddress - ether account of provider (0xcb35b7d915454ef540ade6068dfe2f44e8fa773f)
   constructor (uint256 _registerFEE, uint256 _mumHEALTHnumber, string memory _mumNAME, string memory _carePROVIDERname, address payable _carePROVIDERaddress)
     	public
     	payable
